@@ -1,5 +1,9 @@
-const Form = (actions) => {
-    const {submitUser, changeName, changeEmail} = actions;
+import { useAppContext } from "../contexts/AppContext";
+
+const Form = () => {
+    const {formActions} = useAppContext();
+    const {submitUser, changeName, changeEmail} = formActions;
+    
     return (
         <form action="" className="form" onSubmit={(e) => submitUser(e)}>
             <input type="text" className='form-name' name="name" placeholder='name' onChange={(e) => changeName(e.target.value)}/>
