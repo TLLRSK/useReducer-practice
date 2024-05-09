@@ -1,0 +1,77 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+input, button, textarea, select {
+font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#root, #__next {
+isolation: isolate;
+}
+p, input {
+    font-size: 1.6rem;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding: 2.4rem;
+    gap: 3.2rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        padding: .6rem 1.2rem;
+    }
+}
+.list-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    h3 {
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .list {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 1.2rem;
+    }
+}
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    background: #1111;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+}

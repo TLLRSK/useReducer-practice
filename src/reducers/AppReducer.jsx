@@ -43,8 +43,8 @@ const AppReducer = () => {
 
     return (
         <main className="app">
-            <Form {...actions}/>
             <UsersList list={state.usersList}/>
+            <Form {...actions}/>
         </main>
     )
 }

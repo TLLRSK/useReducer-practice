@@ -2,8 +2,8 @@ const User = (user) => {
     const {name, email} = user;
     return (
         <li className="user">
-            <p>{name}</p>
-            <p>{email}</p>
+            <p>Name: {name}</p>
+            <p>Email: {email}</p>
         </li>
     )
 }
