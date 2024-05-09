@@ -1,9 +1,10 @@
-const User = () => {
+const User = (user) => {
+    const {name, email} = user;
     return (
-        <article className="user-card">
-            <p>User name</p>
-            <p>User email</p>
-        </article>
+        <li className="user">
+            <p>{name}</p>
+            <p>{email}</p>
+        </li>
     )
 }
 

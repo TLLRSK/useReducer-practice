@@ -1,5 +1,7 @@
 import { nanoid } from "nanoid";
 import { useReducer } from "react";
+import Form from "../components/Form";
+import UsersList from "../components/UsersList";
 
 const initialState = {
     usersList: [],
@@ -37,27 +39,12 @@ const AppReducer = () => {
         dispatch({type: 'CHANGE_EMAIL', payload})
     }
 
+    const actions = {submitUser, changeName, changeEmail};
+
     return (
         <main className="app">
-            <form action="" className="form" onSubmit={(e) => submitUser(e)}>
-                <input type="text" className='form-name' name="name" placeholder='name' onChange={(e) => changeName(e.target.value)}/>
-                <input type="email" className='form-email' name="email" placeholder='email' onChange={(e) => changeEmail(e.target.value)}/>
-                <input type="submit" className="form-submit"/>
-            </form>
-            <div className="list-container">
-                <h3>Users list</h3>
-                <ul className="list">
-                    {state.usersList.map((user, index) => {
-                        const {name, email} = user;
-                        return (
-                            <li key={index}>
-                                <p>{name}</p>
-                                <p>{email}</p>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </div>
+            <Form {...actions}/>
+            <UsersList list={state.usersList}/>
         </main>
     )
 }
